@@ -1,0 +1,12 @@
+version: 1.0
+services:
+- name: etcd
+  version: 3.5.1-debian-10-r10
+  homepage: "https://github.com/bitnami/bitnami-docker-etcd"
+  desc: "Bitnami Docker Etcd"
+  type: compose
+  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/etcd/3.5.1-debian-10-r10/docker-compose.yaml
+
+
+
+
