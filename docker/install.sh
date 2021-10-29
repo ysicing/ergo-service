@@ -170,6 +170,9 @@ echo_docker_as_nonroot() {
 		(
 			set -x
 			$sh_c 'docker version'
+            if [ ! -f "/usr/local/bin/dps" ]; then
+                do_config
+            fi
 		) || true
 	fi
 
