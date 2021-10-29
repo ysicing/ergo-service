@@ -7,9 +7,26 @@ services:
   type: shell
   url: https://raw.githubusercontent.com/ysicing/ergo-service/master/docker/install.sh
 - name: etcd
-  version: 3.5.1-debian-10-r10
+  version: 3.5.1
   homepage: "https://github.com/bitnami/bitnami-docker-etcd"
   desc: "Bitnami Docker Etcd"
   type: compose
-  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/etcd/3.5.1-debian-10-r10/docker-compose.yaml
-
+  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/etcd/3.5.1/docker-compose.yaml
+- name: consul
+  version: 1.10.3
+  homepage: "https://github.com/bitnami/bitnami-docker-consul"
+  desc: "Bitnami Docker Consul"
+  type: compose
+  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/consul/1.10.3/docker-compose.yaml
+- name: mariadb
+  version: 10.6.4
+  homepage: "https://github.com/bitnami/bitnami-docker-mariadb"
+  desc: "Bitnami Docker Mariadb"
+  type: compose
+  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/mariadb/10.6.4/docker-compose.yaml
+- name: redis
+  version: 10.6.4
+  homepage: "https://github.com/bitnami/bitnami-docker-redis"
+  desc: "Bitnami Docker Redis"
+  type: compose
+  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/redis/6.2.6/docker-compose.yaml
