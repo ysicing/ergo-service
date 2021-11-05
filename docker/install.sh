@@ -621,8 +621,12 @@ do_config() {
     cat > /etc/docker/daemon.json <<EOF
 {
   "registry-mirrors": ["https://dyucrs4l.mirror.aliyuncs.com"],
+  "exec-opts": [
+    "native.cgroupdriver=cgroupfs"
+  ],
   "bip": "169.254.123.1/24",
   "max-concurrent-downloads": 10,
+  "live-restore": true,
   "log-driver": "json-file",
   "log-level": "warn",
   "log-opts": {
