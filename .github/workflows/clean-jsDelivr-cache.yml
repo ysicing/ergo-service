@@ -1,0 +1,21 @@
+name: Clean jsDelivr Cache
+
+on: 
+  # push代码时触发workflow
+  push:
+    # 忽略README.md
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+
+jobs:
+  jsDelivr:
+    runs-on: ubuntu-latest
+
+    - name: Install Python
+      run: |
+	wget https://raw.githubusercontent.com/ysicing/ergo-service/master/default.yaml 
+	wget https://mirror.ghproxy.com/https://raw.githubusercontent.com/ysicing/ergo-service/master/default.yaml
+        wget https://cdn.jsdelivr.net/gh/ysicing/ergo-service@master/default.yaml
+        wget https://purge.jsdelivr.net/gh/ysicing/ergo-service@master/default.yaml
+        wget https://cdn.jsdelivr.net/gh/ysicing/ergo-service@master/default.yaml
