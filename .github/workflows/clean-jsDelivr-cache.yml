@@ -1,4 +1,4 @@
-name: Clean jsDelivr Cache
+name: clean cache
 
 on: 
   # push代码时触发workflow
@@ -11,11 +11,12 @@ on:
 jobs:
   jsDelivr:
     runs-on: ubuntu-latest
-
-    - name: Install Python
+    name: clean cache
+    steps:
+    - name: build ergo
       run: |
-	wget https://raw.githubusercontent.com/ysicing/ergo-service/master/default.yaml 
-	wget https://mirror.ghproxy.com/https://raw.githubusercontent.com/ysicing/ergo-service/master/default.yaml
-        wget https://cdn.jsdelivr.net/gh/ysicing/ergo-service@master/default.yaml
-        wget https://purge.jsdelivr.net/gh/ysicing/ergo-service@master/default.yaml
-        wget https://cdn.jsdelivr.net/gh/ysicing/ergo-service@master/default.yaml
+          wget https://raw.githubusercontent.com/ysicing/ergo-service/master/default.yaml
+          wget https://mirror.ghproxy.com/https://raw.githubusercontent.com/ysicing/ergo-service/master/default.yaml
+          wget https://cdn.jsdelivr.net/gh/ysicing/ergo-service@master/default.yaml
+          wget https://purge.jsdelivr.net/gh/ysicing/ergo-service@master/default.yaml
+          wget https://cdn.jsdelivr.net/gh/ysicing/ergo-service@master/default.yaml
