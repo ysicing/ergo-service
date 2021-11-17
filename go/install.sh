@@ -9,7 +9,7 @@ command_exists() {
 go::dl(){
     pushd /tmp
     # 下载
-    [ -f "go1.17.1.linux-amd64.tar.gz" ] && rm -rf go1.17.3.linux-amd64.tar.gz
+    [ -f "go1.17.3.linux-amd64.tar.gz" ] && rm -rf go1.17.3.linux-amd64.tar.gz
     wget https://golang.google.cn/dl/go1.17.3.linux-amd64.tar.gz
     popd 
 }
@@ -37,7 +37,7 @@ go::install(){
         $sh_c 'rm -rf /usr/local/go'
     fi
     echo "解压"
-    $sh_c 'tar -C /usr/local -xzf /tmp/go1.17.1.linux-amd64.tar.gz'
+    $sh_c 'tar -C /usr/local -xzf /tmp/go1.17.3.linux-amd64.tar.gz'
     echo "配置"
     cat >> $HOME/.bashrc <<EOF
 export GO111MODULE=on
