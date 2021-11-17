@@ -1,7 +1,4 @@
 # ergo-services
 
-二狗服务库
+[二狗](https://github.com/ysicing/ergo)服务库
 
-## 支持服务
-
-- etcd 

@@ -1,7 +1,7 @@
 version: '2.1'
 services:
   etcd:
-    image: docker.io/bitnami/etcd:3.5.0-debian-10-r111
+    image: docker.io/bitnami/etcd:3.5.1
     container_name: etcd
     restart: always
     ports:

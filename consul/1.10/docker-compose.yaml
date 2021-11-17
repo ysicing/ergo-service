@@ -2,7 +2,7 @@ version: '2'
 
 services:
   consul:
-    image: docker.io/bitnami/consul:1.10.3
+    image: docker.io/bitnami/consul:1.10.4
     container_name: consul
     restart: always
     volumes:

@@ -1,0 +1,26 @@
+version: '2.1'
+
+services:
+  mysql:
+    image: docker.io/bitnami/mysql:8.0.27
+    ports:
+      - '3306:3306'
+    volumes:
+      - 'mysql_data:/bitnami/mysql/data'
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      #- ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=ohhiughaa6He0Poje0aeFaiKae3Jeyie
+      - MYSQL_DATABASE=ergo
+      - MYSQL_USER=quaeRaekohth3oom
+      - MYSQL_PASSWORD=ooGhiexuM0fahqu0iek8phohb8ieghah
+      # - MYSQL_AUTHENTICATION_PLUGIN=mysql_native_password
+    healthcheck:
+      test: ['CMD', '/opt/bitnami/scripts/mysql/healthcheck.sh']
+      interval: 15s
+      timeout: 5s
+      retries: 6
+
+volumes:
+  mysql_data:
+    driver: local
