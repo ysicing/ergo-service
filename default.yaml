@@ -1,4 +1,5 @@
 version: 1.0
+release: v20211117
 services:
 - name: docker
   version: "latest"
