@@ -1,5 +1,5 @@
 version: 1.0
-release: v20211117
+release: v20211215
 services:
 - name: docker
   version: "latest"
@@ -8,7 +8,7 @@ services:
   type: shell
   url: https://raw.githubusercontent.com/ysicing/ergo-service/master/docker/install.sh
 - name: go
-  version: "1.17.3"
+  version: 1.17
   homepage: "https://golang.google.cn/"
   desc: "Golang for Linux installation script"
   type: shell
@@ -20,11 +20,11 @@ services:
   type: compose
   url: https://raw.githubusercontent.com/ysicing/ergo-service/master/etcd/3.5/docker-compose.yaml
 - name: consul
-  version: 1.10
+  version: 1.11
   homepage: "https://github.com/bitnami/bitnami-docker-consul"
   desc: "Bitnami Docker Consul"
   type: compose
-  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/consul/1.10/docker-compose.yaml
+  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/consul/1.11/docker-compose.yaml
 - name: mariadb
   version: 10.6
   homepage: "https://github.com/bitnami/bitnami-docker-mariadb"
@@ -40,6 +40,18 @@ services:
 - name: mysql
   version: 8.0
   homepage: "https://github.com/bitnami/bitnami-docker-mysql"
-  desc: "Bitnami Docker Mysql"
+  desc: "Bitnami Docker Mysql 8.x"
   type: compose
   url: https://raw.githubusercontent.com/ysicing/ergo-service/master/mysql/8.0/docker-compose.yaml
+- name: mysql5
+  version: 5.7
+  homepage: "https://github.com/bitnami/bitnami-docker-mysql"
+  desc: "Bitnami Docker Mysql 5.x"
+  type: compose
+  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/mysql/5.7/docker-compose.yaml
+- name: kube-nfs
+  version: 20211215
+  homepage: "https://ysicing.me/"
+  desc: "NFS for Kube installation script"
+  type: shell
+  url: https://raw.githubusercontent.com/ysicing/ergo-service/master/nfs/install.sh

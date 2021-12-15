@@ -170,9 +170,6 @@ echo_docker_as_nonroot() {
 		(
 			set -x
 			$sh_c 'docker version'
-            if [ ! -f "/usr/local/bin/dps" ]; then
-                do_config
-            fi
 		) || true
 	fi
 
@@ -617,7 +614,7 @@ do_install() {
 }
 
 do_config() {
-    mkdir /etc/docker
+    [ -d "/etc/docker" ] || mkdir /etc/docker
     cat > /etc/docker/daemon.json <<EOF
 {
   "registry-mirrors": ["https://dyucrs4l.mirror.aliyuncs.com"],
